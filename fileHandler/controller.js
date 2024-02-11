@@ -6,8 +6,16 @@ async function initiateProcess(req, res){
         const sourceFileId = req.query.sourceFileId;
         const destinationFolderName = req.query.destinationFolderName;
         const emailId = req.query.emailId || 'balaswamy.dev@gmail.com';
-        await start(sourceFileId, destinationFolderName, emailId);
-        res.status(StatusCodes.CREATED).json({message: "created", data: null})
+        let response = {message: "created", data: null};
+        let statusCode = StatusCodes.CREATED;
+        if(!sourceFileId || !destinationFolderName){
+            response.message = "please provide sourceFileId and destinationFolderName";
+            response.error = null;
+            statusCode = StatusCodes.BAD_REQUEST;
+        }else{
+            await start(sourceFileId, destinationFolderName, emailId);
+        }
+        res.status(statusCode).json(response);
     } catch (error) {
         console.error('Error occurred', error);
         res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({message: 'Error occurred.', error: error.toString() });

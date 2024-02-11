@@ -37,7 +37,7 @@ function getStatusForEverySec(response) {
 async function getFilesList() {
     try {
         const response = await drive.files.list({
-            fields: "files(id, name, mimeType)"
+            fields: "files(id, name, mimeType, modifiedTime, createdTime)"
         });
         const filesList = response.data.files;
         return filesList;
@@ -50,7 +50,7 @@ async function getFoldersList() {
     try {
         const response = await drive.files.list({
             q: "mimeType='application/vnd.google-apps.folder'",
-            fields: "files(id, name)"
+            fields: "files(id, name, modifiedTime, createdTime)"
         });
         const folderList = response.data.files;
         return folderList
