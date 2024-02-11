@@ -339,5 +339,5 @@ async function deleteFileByFilenameAndFolderId(fileName, folderId) {
 //     res.status(404).json({ message: 'Process not found' });
 //   }
 // });
-
 app.listen(3003, () => console.log('Server started on port 3002'));
+module.exports = app;
