@@ -11,6 +11,7 @@ description:
 
 Clone the repository:
     git clone https://github.com/Balu-Kandru/videoFileHandling.git
+    use main don't need to change
 
 Installation:
     npm install
