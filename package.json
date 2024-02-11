@@ -2,10 +2,10 @@
   "name": "file-handling",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "fs": "^0.0.1-security",
     "google-auth-library": "^9.6.3",
     "googleapis": "^39.2.0",
+    "http-status-codes": "^2.3.0",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.0.3",
     "request": "^2.88.2",
