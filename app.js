@@ -33,4 +33,4 @@ app.listen(port, (error)=>{
     }else{
         console.log(`Server is running on port ${port}`);
     }
-})
+});
