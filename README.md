@@ -18,13 +18,16 @@ description:
         password - Balu@9640
 
 Clone the repository:
+
     git clone https://github.com/Balu-Kandru/videoFileHandling.git
     use main don't need to change
 
 Installation:
+
     npm install
 
 To Run Project:
+
     npm start (Default I using 3000 PORT.) 
 
 Endpoints INFO:
@@ -48,6 +51,7 @@ Endpoints INFO:
             no parameters
 
 Dependencies:
+
     fs: For file system operations.
     googleapis: Google API library.
     http-status-codes: For HTTP status code constants.
