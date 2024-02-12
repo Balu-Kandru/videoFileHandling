@@ -1,11 +1,15 @@
 ProjectName:
+
     Video File Handling
 
-deployed on:    
+deployed on:
+    
     https://video-file-handling.vercel.app
+
     due to vercel is a stateless nature /api/getStatus API will not work, need to think another way
 
 description:
+
     Integrated Google drive APIs to perform upload, download, getting files, folders and deletion.
     And has functionlitites to initiate download and upload, monitor status, and retrieve file/folder lists.
 
