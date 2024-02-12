@@ -2,11 +2,10 @@ ProjectName:
 
     Video File Handling
 
-deployed on:
+deployed on (vercel due its stateless nature /api/getStatus API will not work, need to think another way):
     
     https://video-file-handling.vercel.app
 
-    due to vercel is a stateless nature /api/getStatus API will not work, need to think another way
 
 description:
 
@@ -20,15 +19,14 @@ description:
 Clone the repository:
 
     git clone https://github.com/Balu-Kandru/videoFileHandling.git
-    use main don't need to change
 
 Installation:
 
     npm install
 
-To Run Project:
+To Run Project (Default I using 3000 PORT.) :
 
-    npm start (Default I using 3000 PORT.) 
+    npm start 
 
 Endpoints INFO:
 
