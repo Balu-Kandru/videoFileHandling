@@ -125,7 +125,7 @@ async function ensureOrCreateFolder(folderPath) {
 async function downloadAndUpload(fileId, destinationFolderId, fileMetadata) {
     try {
         const fileName = fileMetadata.data.name
-        let dirPath = path.join(__dirname, 'downloads');
+        let dirPath = path.join('/tmp', 'downloads');
         await ensureOrCreateFolder(dirPath)
         const filePath = path.join(dirPath, fileName);
         const uploadMetadata = {
@@ -208,7 +208,7 @@ async function downloadAndUploadFile(fileId, localFilePath, metadata, totalSize)
 };
 
 async function deleteByFileId(fileName, folderId) {
-    let filePath = path.join(__dirname, 'downloads', fileName);
+    let filePath = path.join('/tmp', 'downloads', fileName);
     try {
         await deleteFileIfExists(filePath);
         await deleteFileByFilenameAndFolderId(fileName, folderId)
